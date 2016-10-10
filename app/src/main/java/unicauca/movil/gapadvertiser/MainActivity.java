@@ -3,6 +3,7 @@ package unicauca.movil.gapadvertiser;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.content.Intent;
+import android.os.ParcelUuid;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+  static final ParcelUuid SERVICE_UUID = ParcelUuid.fromString("0000b81d-0000-1000-8000-00805f9b34fb");
+  static final ParcelUuid DATA_UUID = ParcelUuid.fromString("0000b81d-0000-1000-8000-00805f9b34fb");
 
   BluetoothAdapter adapter;
 
